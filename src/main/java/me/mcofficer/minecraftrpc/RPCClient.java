@@ -36,6 +36,8 @@ public class RPCClient {
             callbackRunner.start();
         }
 
+        Runtime.getRuntime().addShutdownHook(new Thread(DiscordRPC.INSTANCE::Discord_Shutdown));
+
         System.out.println("RPCClient has been started.");
 
     }

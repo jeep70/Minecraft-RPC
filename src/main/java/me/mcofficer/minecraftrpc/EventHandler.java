@@ -19,4 +19,8 @@ public class EventHandler {
             main.proxy.rpcupdate(main, "Multiplayer", main.configHandler);
     }
 
+    @SubscribeEvent
+    public void onClientDisconnectedFromServerEvent(FMLNetworkEvent.ClientDisconnectionFromServerEvent event) {
+        main.proxy.rpcupdate(main, "in Main Menu", main.configHandler);
+    }
 }
