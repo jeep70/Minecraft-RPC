@@ -29,13 +29,10 @@ public class MinecraftRPC {
     public void onPreInit(FMLPreInitializationEvent event) {
         configHandler = new ConfigHandler(new Configuration(event.getSuggestedConfigurationFile()));
         configHandler.syncConfig();
-    }
-
-    @Mod.EventHandler
-    public void onInit(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(eventHandler);
         this.rpcClient = new RPCClient(configHandler.clientID);
         proxy.rpcinit(this);
+        proxy.rpcupdate(this, "Loading...", configHandler);
     }
 
     @Mod.EventHandler
