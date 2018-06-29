@@ -47,8 +47,9 @@ public class RPCClient {
         DiscordRichPresence presence = new DiscordRichPresence();
         presence.largeImageKey = configHandler.largeImageKey;
         presence.largeImageText = configHandler.largeImageText;
-        presence.smallImageKey = configHandler.smallImageKey;
-        presence.smallImageText = configHandler.smallImageText;
+        //small image disabled in this fork
+        // presence.smallImageKey = configHandler.smallImageKey;
+        // presence.smallImageText = configHandler.smallImageText;
         if (details != null){
             presence.details = details;
             presence.startTimestamp = System.currentTimeMillis() / 1000;

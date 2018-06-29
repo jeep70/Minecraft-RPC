@@ -29,15 +29,16 @@ public class ConfigHandler {
             Property lateImageTextProp = config.get(Configuration.CATEGORY_GENERAL,
                     "largeImageText",
                     "Minecraft",
-                    "The text displayed when hovering over the small image");
-            Property smallImageKeyProp = config.get(Configuration.CATEGORY_GENERAL,
-                    "smallImageKey",
-                    "minecraft",
-                    "The key of an image uploaded to the application.");
-            Property smallImageTextProp = config.get(Configuration.CATEGORY_GENERAL,
-                    "smallImageText",
-                    "Minecraft",
-                    "The text displayed when hovering over the small image");
+                    "The text displayed when hovering over the large image");
+            //small image disabled in this fork
+            // Property smallImageKeyProp = config.get(Configuration.CATEGORY_GENERAL,
+            //         "smallImageKey",
+            //         "minecraft",
+            //         "The key of an image uploaded to the application.");
+            // Property smallImageTextProp = config.get(Configuration.CATEGORY_GENERAL,
+            //         "smallImageText",
+            //         "Minecraft",
+            //         "The text displayed when hovering over the small image");
             Property clientIDProp = config.get(Configuration.CATEGORY_GENERAL,
                     "clientID",
                     "384232743162216448",
@@ -45,8 +46,9 @@ public class ConfigHandler {
 
             largeImageKey = largeImageKeyProp.getString();
             largeImageText = lateImageTextProp.getString();
-            smallImageKey = smallImageKeyProp.getString();
-            smallImageText = smallImageTextProp.getString();
+            //small image disabled in this fork
+            // smallImageKey = smallImageKeyProp.getString();
+            // smallImageText = smallImageTextProp.getString();
             clientID = clientIDProp.getString();
 
             config.save();

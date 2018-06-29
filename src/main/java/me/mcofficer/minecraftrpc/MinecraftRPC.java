@@ -13,7 +13,7 @@ public class MinecraftRPC {
 
     public static final String modId = "minecraftrpc";
     public static final String name = "Minecraft-RPC";
-    public static final String version = "1.1";
+    public static final String version = "1.2";
 
     public EventHandler eventHandler = new EventHandler(this);
     public RPCClient rpcClient;
